@@ -1,0 +1,39 @@
+
+.container {
+    width: min-content;
+    margin-top: 50px;
+}
+.btns {
+    margin-top: 10px;
+}
+.container input{
+    accent-color: rgb(158, 30, 30);
+}
+#progressBar{
+    width: 700px;
+}
+#fullScreen {
+    position: relative;
+    right: -28px;
+    top: -53px;
+}
+#next , #previous{
+    height: 40px;
+
+}
+.goto-color {
+    text-align: -webkit-center;
+    margin-top: 40px;
+}
+.shapes-container {
+    margin-top: 50px ;
+    display: flex;
+    place-content: center;
+
+}
+label {
+    width: 70px;
+}
+polygon {
+    fill: red;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+   <div class="shapes-container" style="text-align-last: center; font-size: 25px; margin-top: 100px;">
+        <div>
+            <label for="red">Red</label>
+            <input  id="red" type="range" min="0" max="255" value="0" style="accent-color: orange;">
+         </div>
+         <div>
+            <label for="green">Green</label>
+            <input id="green" type="range" min="0" max="255" value="0" style="accent-color: orange;">
+        </div>
+        <div>
+            <label for="blue">Blue</label>
+            <input id="blue" type="range" min="0" max="255" value="0" style="accent-color: orange;">
+        </div>
+   
+    <div class="color-preview" id="colorPreview">Change the 3 Color Ranges above and observe my color Change</div>
+    <div class="goto-color">
+        <button  onclick="window.location.href='shapes.html'" class="btn btn-danger">Go To Color Shapes task</button>
+    </div>
+</div>
+<script>
+    function changeColor() {
+  var red = document.getElementById("red");
+  var green = document.getElementById("green");
+  var blue = document.getElementById("blue");
+  var text = document.getElementById("colorPreview");
+
+  // get the value of progress bars
+  var r = parseInt(red.value);
+  var g = parseInt(green.value);
+  var b = parseInt(blue.value);
+
+  var hexR = r.toString(16);
+  var hexG = g.toString(16);
+  var hexB = b.toString(16);
+
+  if (hexR.length == 1) hexR = "0" + hexR;
+  if (hexG.length == 1) hexG = "0" + hexG;
+  if (hexB.length == 1) hexB = "0" + hexB;
+  var color = "#" + hexR + hexG + hexB;
+  text.style.color = color;
+}
+
+// add event listeners to the progress bars
+red.addEventListener("input", changeColor);
+green.addEventListener("input", changeColor);
+blue.addEventListener("input", changeColor);
+
+</script>
+</body>
+</html>
